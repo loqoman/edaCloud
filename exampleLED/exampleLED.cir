@@ -1,0 +1,5 @@
+.title KiCad schematic
+V1 A C 
+R1 B A 500k
+D1 C B LED
+.end
