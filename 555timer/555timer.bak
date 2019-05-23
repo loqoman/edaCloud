@@ -187,8 +187,8 @@ NoConn ~ 4100 3600
 NoConn ~ 4100 3800
 Text Notes 2250 4800 0    50   ~ 0
 555 is currently being used as a monostable multivibrator. \nMonostable means after SW1 is pressed, a output will go to a\n1 or 0,  for tau seconds, then return to the opposite state
-Text Notes 6750 4100 0    50   ~ 0
-Caluclating tau:\n3 seconds =  1.1*R1*C1\n3 seconds =  1.1*x\nx = 2.72\nR1*C1 = 2.72\nR1 = 5k ohm\n2.72 / 5k = 0.000544\nmicro = .0001\nR1 = 5k ohm\nC1 = 5.44 μf\n
-Text Notes 8000 3850 0    50   ~ 0
+Text Notes 6700 4150 0    50   ~ 0
+Caluclating tau:\n3 seconds =  1.1*R1*C1\n3 seconds =  1.1*x\nx = 2.72\nR1*C1 = 2.72\nR1 = 5k ohm\n2.72 / 5k = 0.000544 = 5.44 * 10^-4\nmicro = 10^-6\nR1 = 5k ohm\nC1 = 5.44 μf\n
+Text Notes 8350 3900 0    50   ~ 0
 Possible values for R1 and C1:\nR1:\n10k\n5k\nC1:\n1 μf\n.01 μf
 $EndSCHEMATC

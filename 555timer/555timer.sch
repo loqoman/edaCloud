@@ -19,7 +19,7 @@ L Timer:NE555 U1
 U 1 1 5C901815
 P 5000 3800
 F 0 "U1" H 5000 4378 50  0000 R CNN
-F 1 "NE555" H 5000 4287 50  0000 R CNN
+F 1 "NE555P" H 5000 4287 50  0000 R CNN
 F 2 "" H 5000 3800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 5000 3800 50  0001 C CNN
 	1    5000 3800
@@ -79,21 +79,8 @@ Wire Wire Line
 Wire Wire Line
 	6100 4000 5500 4000
 Connection ~ 6100 3800
-$Comp
-L Graphic:SYM_Arrow_Large #SYM?
-U 1 1 5C9155A3
-P 5750 3050
-F 0 "#SYM?" H 5750 3140 50  0001 C CNN
-F 1 "SYM_Arrow_Large" H 5750 2970 50  0001 C CNN
-F 2 "" H 5750 3050 50  0001 C CNN
-F 3 "~" H 5750 3050 50  0001 C CNN
-	1    5750 3050
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	5500 3600 5750 3600
-Text Label 5800 3100 0    50   ~ 0
-Output
 $Comp
 L Device:R R2
 U 1 1 5C915725
@@ -129,8 +116,6 @@ Wire Wire Line
 	5000 4200 5000 4300
 Wire Wire Line
 	5000 3250 6100 3250
-Wire Wire Line
-	5750 3600 5750 3200
 Wire Wire Line
 	3900 3600 3900 3800
 Wire Wire Line
@@ -172,23 +157,13 @@ Wire Wire Line
 	5000 4400 5000 4500
 Wire Wire Line
 	3900 3800 3900 4000
-Text Notes 4100 2950 0    50   ~ 0
-t = 1.1*R1*C1\n\n
-Text Notes 4100 3150 0    50   ~ 0
-where t is in seconds\nR1 is in ohms\nC1 is in farads
-Text Notes 1750 3750 0    50   ~ 0
-C2 is fixed because it behaives as a noise filter
-Text Notes 1750 3850 0    50   ~ 0
-Output goes to LED. 200mA of load
-Text Notes 1750 4350 0    50   ~ 0
-Explanition of componenets\nR1 - Used to calculate tau\nR2 - Used to create a high-impedence path,\nsuch that there is no power goinig to pin 2 and 5 \nC1 - Used to calculate tau\nC2 - DC filter for input of 555\n
 NoConn ~ 5750 3250
 NoConn ~ 4100 3600
 NoConn ~ 4100 3800
-Text Notes 2250 4800 0    50   ~ 0
-555 is currently being used as a monostable multivibrator. \nMonostable means after SW1 is pressed, a output will go to a\n1 or 0,  for tau seconds, then return to the opposite state
-Text Notes 6700 4150 0    50   ~ 0
-Caluclating tau:\n3 seconds =  1.1*R1*C1\n3 seconds =  1.1*x\nx = 2.72\nR1*C1 = 2.72\nR1 = 5k ohm\n2.72 / 5k = 0.000544 = 5.44 * 10^-4\nmicro = 10^-6\nR1 = 5k ohm\nC1 = 5.44 μf\n
 Text Notes 8350 3900 0    50   ~ 0
 Possible values for R1 and C1:\nR1:\n10k\n5k\nC1:\n1 μf\n.01 μf
+Wire Wire Line
+	5750 2750 5750 3600
+Text Label 5750 2850 0    50   ~ 0
+Out
 $EndSCHEMATC
