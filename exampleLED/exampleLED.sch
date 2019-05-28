@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:exampleLED-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -73,4 +74,10 @@ Text Notes 5350 2600 0    50   ~ 0
 At point A there will be 2v absolute\n\n
 Text Notes 5350 2600 0    50   ~ 0
 At point B there will be 3v absolute\n
+Text Notes 5350 2700 0    50   ~ 0
+The voltage drop across the LED = 2v\n
+Text Notes 5350 2800 0    50   ~ 0
+The voltage drop across the resistor has to be 3v\n
+Text Notes 5350 2900 0    50   ~ 0
+Solving for R: R = 3 / .02 = 150
 $EndSCHEMATC
