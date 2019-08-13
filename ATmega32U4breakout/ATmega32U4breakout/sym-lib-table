@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ATmega32UQuad44)(type Legacy)(uri ${KIPRJMOD}/ATmega32UQuad44.lib)(options "")(descr ""))
+)
