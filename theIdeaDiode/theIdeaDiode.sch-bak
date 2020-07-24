@@ -1,0 +1,175 @@
+EESchema Schematic File Version 4
+LIBS:theIdeaDiode-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:D D1
+U 1 1 5F176C48
+P 4350 4250
+F 0 "D1" H 4350 4466 50  0000 C CNN
+F 1 "BAT40VC" H 4350 4375 50  0000 C CNN
+F 2 "" H 4350 4250 50  0001 C CNN
+F 3 "~" H 4350 4250 50  0001 C CNN
+F 4 "D" H 4350 4250 50  0001 C CNN "Spice_Primitive"
+F 5 "BAT40VC" H 4350 4250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4350 4250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "BAT40VC.LIB" H 4350 4250 50  0001 C CNN "Spice_Lib_File"
+	1    4350 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5F17DCB0
+P 3450 4300
+F 0 "V1" V 2947 4300 50  0000 C CNN
+F 1 "30" V 3038 4300 50  0000 C CNN
+F 2 "" H 3450 4300 50  0001 C CNN
+F 3 "~" H 3450 4300 50  0001 C CNN
+	1    3450 4300
+	1    0    0    -1  
+$EndComp
+Text GLabel 3450 3900 1    50   Input ~ 0
+Vcc
+Wire Wire Line
+	3450 4000 3450 3900
+$Comp
+L power:GND #PWR?
+U 1 1 5F180568
+P 3450 4750
+F 0 "#PWR?" H 3450 4500 50  0001 C CNN
+F 1 "GND" H 3455 4577 50  0000 C CNN
+F 2 "" H 3450 4750 50  0001 C CNN
+F 3 "" H 3450 4750 50  0001 C CNN
+	1    3450 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4600 3450 4750
+$Comp
+L pspice:VSOURCE V2
+U 1 1 5F1813B0
+P 2550 4300
+F 0 "V2" H 2778 4346 50  0000 L CNN
+F 1 "5" H 2778 4255 50  0000 L CNN
+F 2 "" H 2550 4300 50  0001 C CNN
+F 3 "~" H 2550 4300 50  0001 C CNN
+	1    2550 4300
+	1    0    0    -1  
+$EndComp
+Text GLabel 2550 3900 1    50   Input ~ 0
+Va
+Wire Wire Line
+	2550 4000 2550 3900
+$Comp
+L power:GND #PWR?
+U 1 1 5F1813B8
+P 2550 4750
+F 0 "#PWR?" H 2550 4500 50  0001 C CNN
+F 1 "GND" H 2555 4577 50  0000 C CNN
+F 2 "" H 2550 4750 50  0001 C CNN
+F 3 "" H 2550 4750 50  0001 C CNN
+	1    2550 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 4600 2550 4750
+Text Notes 5550 3800 0    50   ~ 0
+.tran 1u 1m\n
+Text Notes 5450 3700 0    50   ~ 0
+SPICE Commands:
+$Comp
+L power:GND #PWR?
+U 1 1 5F17BEBE
+P 4050 4300
+F 0 "#PWR?" H 4050 4050 50  0001 C CNN
+F 1 "GND" H 4055 4127 50  0000 C CNN
+F 2 "" H 4050 4300 50  0001 C CNN
+F 3 "" H 4050 4300 50  0001 C CNN
+	1    4050 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4250 4050 4300
+Wire Wire Line
+	4050 4250 4200 4250
+Text Notes 5450 3950 0    50   ~ 0
+Notes:\n
+Text Notes 5550 4050 0    50   ~ 0
+We know across D1, voltage has to be 0 at ground
+Text Label 5000 4250 0    50   ~ 0
+Vb
+Text GLabel 4700 3650 1    50   Input ~ 0
+Vcc
+Wire Wire Line
+	5000 4800 5000 4950
+$Comp
+L power:GND #PWR?
+U 1 1 5F17BD0E
+P 5000 4950
+F 0 "#PWR?" H 5000 4700 50  0001 C CNN
+F 1 "GND" H 5005 4777 50  0000 C CNN
+F 2 "" H 5000 4950 50  0001 C CNN
+F 3 "" H 5000 4950 50  0001 C CNN
+	1    5000 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F17AB7A
+P 5000 4650
+F 0 "R2" H 5070 4696 50  0000 L CNN
+F 1 "40k" H 5070 4605 50  0000 L CNN
+F 2 "" V 4930 4650 50  0001 C CNN
+F 3 "~" H 5000 4650 50  0001 C CNN
+	1    5000 4650
+	1    0    0    -1  
+$EndComp
+Connection ~ 4700 4250
+Wire Wire Line
+	5000 4250 5000 4500
+Wire Wire Line
+	4700 4250 5000 4250
+Wire Wire Line
+	4700 3950 4700 4250
+Wire Wire Line
+	4500 4250 4700 4250
+$Comp
+L Device:R R1
+U 1 1 5F17709B
+P 4700 3800
+F 0 "R1" H 4770 3846 50  0000 L CNN
+F 1 "10k" H 4770 3755 50  0000 L CNN
+F 2 "" V 4630 3800 50  0001 C CNN
+F 3 "~" H 4700 3800 50  0001 C CNN
+	1    4700 3800
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	5350 5350 4550 5350
+Wire Notes Line
+	4550 5350 4550 3300
+Wire Notes Line
+	4550 3300 5350 3300
+Wire Notes Line
+	5350 3300 5350 5350
+Wire Notes Line rgb(255, 14, 21)
+	3900 4550 4950 4550
+Wire Notes Line rgb(255, 17, 0)
+	4950 4550 4950 3400
+Wire Notes Line rgb(255, 23, 0)
+	4950 3400 3900 3400
+Wire Notes Line rgb(255, 40, 5)
+	3900 3400 3900 4550
+$EndSCHEMATC

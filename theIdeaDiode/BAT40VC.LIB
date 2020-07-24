@@ -1,0 +1,3 @@
+* SRC=BAT40VC;DI_BAT40VC;Diodes;Si;  40.0V  0.200A  5.00ns   Diodes Inc. Schottky
+.MODEL BAT40VC D  ( IS=82.9n RS=0.373 BV=40.0 IBV=10.0u
++ CJO=11.9p  M=0.333 N=1.14 TT=7.20n )
