@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:theIdeaDiode-cache
-EELAYER 30 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -34,7 +34,7 @@ L pspice:VSOURCE V1
 U 1 1 5F17DCB0
 P 3450 4300
 F 0 "V1" V 2947 4300 50  0000 C CNN
-F 1 "30" V 3038 4300 50  0000 C CNN
+F 1 "9" V 3038 4300 50  0000 C CNN
 F 2 "" H 3450 4300 50  0001 C CNN
 F 3 "~" H 3450 4300 50  0001 C CNN
 	1    3450 4300
@@ -164,12 +164,68 @@ Wire Notes Line
 	4550 3300 5350 3300
 Wire Notes Line
 	5350 3300 5350 5350
-Wire Notes Line rgb(255, 14, 21)
+Wire Notes Line rgb(255, 14, 0)
 	3900 4550 4950 4550
 Wire Notes Line rgb(255, 17, 0)
 	4950 4550 4950 3400
 Wire Notes Line rgb(255, 23, 0)
 	4950 3400 3900 3400
-Wire Notes Line rgb(255, 40, 5)
+Wire Notes Line rgb(255, 40, 0)
 	3900 3400 3900 4550
+$Comp
+L Device:R R3
+U 1 1 5F1B5741
+P 8450 3900
+F 0 "R3" H 8520 3946 50  0000 L CNN
+F 1 "30k" H 8520 3855 50  0000 L CNN
+F 2 "" V 8380 3900 50  0001 C CNN
+F 3 "~" H 8450 3900 50  0001 C CNN
+	1    8450 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5F1B5787
+P 8450 4400
+F 0 "R4" H 8520 4446 50  0000 L CNN
+F 1 "10k" H 8520 4355 50  0000 L CNN
+F 2 "" V 8380 4400 50  0001 C CNN
+F 3 "~" H 8450 4400 50  0001 C CNN
+	1    8450 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3650 8450 3750
+$Comp
+L power:GND #PWR?
+U 1 1 5F1B5C80
+P 8450 5200
+F 0 "#PWR?" H 8450 4950 50  0001 C CNN
+F 1 "GND" H 8455 5027 50  0000 C CNN
+F 2 "" H 8450 5200 50  0001 C CNN
+F 3 "" H 8450 5200 50  0001 C CNN
+	1    8450 5200
+	1    0    0    -1  
+$EndComp
+Text GLabel 8450 3650 1    50   Input ~ 0
+Va
+Text Label 8450 4150 0    50   ~ 0
+(1_3_Va)
+$Comp
+L Device:R R5
+U 1 1 5F1B6511
+P 8450 4950
+F 0 "R5" H 8520 4996 50  0000 L CNN
+F 1 "10k" H 8520 4905 50  0000 L CNN
+F 2 "" V 8380 4950 50  0001 C CNN
+F 3 "~" H 8450 4950 50  0001 C CNN
+	1    8450 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4050 8450 4250
+Wire Wire Line
+	8450 4550 8450 4800
+Wire Wire Line
+	8450 5100 8450 5200
 $EndSCHEMATC
